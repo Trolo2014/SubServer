@@ -1,6 +1,9 @@
 from flask import Flask, jsonify, request
 import random
 
+from keep_alive import keep_alive
+keep_alive()
+
 app = Flask(__name__)
 
 @app.route('/v1/games/<int:place_id>/servers/Public', methods=['GET'])
